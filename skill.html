@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        header{
+            display: flex;
+            align-items: self-end;
+            justify-content: space-around;
+        }
+        header a{
+            padding-top: 20px;
+            font-size: x-large;
+            text-decoration: none; 
+        }
+        header a:hover{
+            transform: scale(1.1);
+            color:  pink;
+            border-bottom: 1px solid purple;
+        }
+       h1{
+        padding-top: 36px;
+        font-size: 60px;
+        text-align: center;
+        background: -webkit-linear-gradient(pink,purple);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+       }
+    
+       #cards-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height: 50%;
+    width: 40%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+#card1 {
+    background-image: url(https://miro.medium.com/v2/resize:fit:1024/0*uO_vEPnGxheGScdI.jpg);
+}
+#card2 {
+    background-image: url(https://e1.pxfuel.com/desktop-wallpaper/556/915/desktop-wallpaper-how-to-install-reactjs-frontend.jpg);
+    background-position: top;
+}
+#card3 {
+    background-image: url(https://www.umn.ac.id/wp-content/uploads/2022/10/Alasan-kuliah-manajemen.jpg);
+    background-position: top;
+}
+#card4{
+  background-image: url(https://www.social-engineer.com/wp-content/uploads/2018/09/critical-thinking.jpg);
+  background-position: center;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 30px;
+    padding-top: 160px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+.overlay h4 {
+  padding-left: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+.fa-solid{
+  font-size: xx-large;
+  color: #000;
+  padding-left: 25px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="education.html">Education</a>
+    </header>
+    <h1>Skills</h1>
+
+    <div id="cards-container">
+        <div class="card" id="card1">
+          <div class="overlay">
+            <h4>Data Structure Algorithms</h4>
+          </div>
+        </div>
+        <div class="card" id="card2">
+          <div class="overlay">
+            <h4>Frontend Developement</h4>
+          </div>
+        </div>
+        <div class="card" id="card3">
+          <div class="overlay">
+            <h4>Management</h4>
+          </div>
+        </div>
+        <div class="card" id="card4">
+            <div class="overlay">
+              <h4>Critical-Thinking</h4>
+            </div>
+         </div>
+      </div>
+</body>
+</html>
